@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giorgos Iliopoulos" />
+    <title>Trainose ticketing counter</title>
+    <link rel="stylesheet" href="./assets/main.css" />
+  </head>
+  <body>
+    <section id="uploader">
+      <div class="file-uploader">
+        <img class="oselogo" src="./assets/img/logo2.png" />
+        <h2>Ticket Upload</h2>
+        <input id="file" type="file" hidden />
+        <label for="file">Open your tickets json</label>
+      </div>
+    </section>
+    <section id="ticket">
+      <div class="ticket-content">
+        <img class="oselogo" src="./assets/img/logo2.png" />
+        <p class="total-cost"></p>
+        <p class="total-tickets"></p>
+        <h4 class="frequency"></h4>
+        <button id="latest">Show latest ticket</button>
+      </div>
+      <div class="latest-ticket">
+        <div class="latest-ticket-content">
+            <img class="oselogo" src="./assets/img/logo2.png" />
+            <h1 id="ticket-id"></h1>
+            <h2 id="date"></h2>
+            <h2 id="time"></h2> 
+            <div class="locations">
+                <p class="from"></p>
+                <p class="to"></p>
+                <img src="./assets/img/train.svg" class="train">
+            </div>
+            <a target="_blank" id="latestlink" href="#">Download the latest ticket</a>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
