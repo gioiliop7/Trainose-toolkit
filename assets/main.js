@@ -1,4 +1,15 @@
 (function () {
+  document.querySelector("#file").onchange = function ({
+    target: {
+      files: [file],
+    },
+  }) {
+    if (file.type != "application/json") {
+      alert("Please select JSON files only!");
+      this.value = "";
+      return;
+    }
+  };
   function onChange(event) {
     var reader = new FileReader();
     reader.onload = onReaderLoad;
@@ -8,6 +19,20 @@
   function onReaderLoad(event) {
     var obj = JSON.parse(event.target.result);
     var data = obj.data;
+    if ("status" in obj) {
+      console.log("Valid Json");
+    } else {
+      alert("Δώσε ένα json του τύπου που υπάρχει στις οδηγίες");
+      return;
+    }
+    if (data){
+      if ("etickets" in data){
+        console.log("Valid Json");
+      } else {
+        alert("Δώσε ένα json του τύπου που υπάρχει στις οδηγίες");
+        return;
+      }
+    }
     let valid_tickets = data.valid_etickets;
     let total = data.totalSum;
     let uploader = document.getElementById("uploader");
@@ -56,27 +81,26 @@
         let ews = latest_ticket.ews;
         let date = latest_ticket.dbrd;
         let time = latest_ticket.tapo;
-        time=time.replace('.',':');
+        time = time.replace(".", ":");
         let link = `https://extranet.trainose.gr/epivatikos/public_ticketing/ajax.php?c=ticket&op=get&ticket=${id}&card=${safety_code}`;
 
-        var a = document.getElementById('latestlink');
+        var a = document.getElementById("latestlink");
         a.href = link;
 
-        var tid = document.getElementById('ticket-id');
-        tid.innerText= `Ticket ID: ${id}`;
+        var tid = document.getElementById("ticket-id");
+        tid.innerText = `Ticket ID: ${id}`;
 
-        var tdate = document.getElementById('date');
-        tdate.innerText= `Date: ${date}`;
+        var tdate = document.getElementById("date");
+        tdate.innerText = `Date: ${date}`;
 
-        var ttime = document.getElementById('time');
-        ttime.innerText=`Time: ${time}`;
-        
-        var from = document.querySelector('.from');
-        from.innerText=`${apo}`;
+        var ttime = document.getElementById("time");
+        ttime.innerText = `Time: ${time}`;
 
-        var to = document.querySelector('.to');
-        to.innerText=`${ews}`;
+        var from = document.querySelector(".from");
+        from.innerText = `${apo}`;
 
+        var to = document.querySelector(".to");
+        to.innerText = `${ews}`;
       },
       false
     );
