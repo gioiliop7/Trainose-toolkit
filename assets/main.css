@@ -420,6 +420,7 @@ label {
   .back-button {
     position: relative;
     margin: 15px 0px;
+    left:0;
   }
 }
 
