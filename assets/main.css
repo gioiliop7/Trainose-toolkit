@@ -253,7 +253,11 @@ body{
   flex-direction: column;
   border-radius:20px;
   color:#fff;
+  transition:all ease 0.2s;
+}
 
+.file-uploader:hover{
+  background:#7bcbfa
 }
 
 .file-uploader input {
