@@ -20,20 +20,19 @@ NetworkJSON(function (response) {
   var node_in_use = diktyo_data.nodes_in_use;
   var main_site = window.location.origin;
   var marker_icon = main_site + "/assets/img/pin.png";
-  var osemap = L.map("ose-map",{
-    doubleClickZoom:true
-  }).setView([40.91351,22.84058], 6.5);
+  var osemap = L.map("ose-map", {
+    doubleClickZoom: true,
+  }).setView([40.91351, 22.84058], 6.5);
   var token = MAPBOX_API_KEY;
   L.tileLayer(
     `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${token}`,
     {
-      attribution:
-        'OSE Railway Map',
+      attribution: "OSE Railway Map",
       maxZoom: 20,
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
-      accessToken:token
+      accessToken: token,
     }
   ).addTo(osemap);
 
@@ -72,14 +71,14 @@ NetworkJSON(function (response) {
     let label = element.label_en;
     var popupcontent = "<h5>" + label + "</h5>";
     var customIcon = L.icon({
-        iconUrl: marker_icon,
-        iconSize: [30, 50], // size of the icon
-        iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+      iconUrl: marker_icon,
+      iconSize: [30, 50], // size of the icon
+      iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+      popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
     });
     var marker = L.marker([lat, lon], {
       id: `marker-${element}`,
-      icon: customIcon
+      icon: customIcon,
     })
       .addTo(osemap)
       .bindPopup(popupcontent);

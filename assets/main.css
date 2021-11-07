@@ -103,7 +103,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
-  position:relative;
+  position: relative;
 }
 
 main {
@@ -230,15 +230,15 @@ textarea {
   resize: vertical;
 }
 
-body{
-    background-image:url('../assets/img/trainose.jpg');
-    background-size: cover;
-    backdrop-filter: blur(15px);
+body {
+  background-image: url("../assets/img/trainose.jpg");
+  background-size: cover;
+  backdrop-filter: blur(15px);
 }
 
-.oselogo{
-    margin-bottom:2rem;
-    max-width: 200px;
+.oselogo {
+  margin-bottom: 2rem;
+  max-width: 200px;
 }
 
 .file-uploader {
@@ -251,13 +251,13 @@ body{
   width: 100%;
   text-align-last: center;
   flex-direction: column;
-  border-radius:20px;
-  color:#fff;
-  transition:all ease 0.2s;
+  border-radius: 20px;
+  color: #fff;
+  transition: all ease 0.2s;
 }
 
-.file-uploader:hover{
-  background:#7bcbfa
+.file-uploader:hover {
+  background: #7bcbfa;
 }
 
 .file-uploader input {
@@ -265,164 +265,166 @@ body{
 }
 
 label {
-    background-color: #f59627;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    margin-top: 1rem;
+  background-color: #f59627;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
-#uploader,#ticket{
-    width:100%;
-    max-width:300px;
+#uploader,
+#ticket {
+  width: 100%;
+  max-width: 300px;
 }
 
-#ticket{
-    background:#fff;
-    display:none;
-    border-radius:20px;
+#ticket {
+  background: #fff;
+  display: none;
+  border-radius: 20px;
 }
 
-.ticket-content,.latest-ticket-content{
-    display:flex;
-    flex-direction: column;
-    min-height:400px;
-    align-items:center;
-    justify-content: center;
-    height:100%;
-    width:100%;
-}
-
-.ticket-content p{
-    padding:20px 0px;
-}
-
-.frequency{
-    background: #143f70;
-    color:#fff;
-    padding:0.5rem;
-    border-radius:10px;
-}
-
-.latest-ticket{
-    display:none;
-}
-
-#latest{
-    background: #f59627;
-    color:#fff;
-    padding:0.5rem;
-    border-radius:10px;
-    border:none;
-    margin:20px 0px;
-    width:100%;
-    max-width:200px;
-}
-
-.locations{
-    display:flex;
-    justify-content: space-between;
-    width:50%;
-    border-bottom:2px dashed #000;
-    position:relative;
-    margin:20px 0px;
-}
-
-.locations p{
-    margin-bottom:10px;
-}
-
-
-.latest-ticket h1,.latest-ticket h2{
-    padding:10px;
-}
-
-.train{
-    max-width:30px;
-    position:absolute;
-    left:60px;
-    top:1px;
-}
-
-.locations p{
-    font-size:13px;
-    font-weight: bold;
-}
-
-.latest-ticket a{
-    margin-top:20px;
-    color:#143f70;
-    text-decoration:none;
-    background: #f59627;
-    padding:0.5rem;
-    font-weight: bold;
-    border-radius:10px;
-}
-
-.map-icon{
-  max-width: 35px;
-}
-
-#map{
-  width:100%;
-}
-
-.map-link{
-  position:absolute;
-  bottom:20px;
-  background:#fff;
-  padding:0.5rem;
-  border-radius:10px;
-  right:10px;
-  transition: all ease 0.3s;
-}
-
-.map-link:hover{
-  background-color: #143f70;
-}
-
-#ose-map{
-  height:480px;
-}
-
-.section-title{
-  padding:15px 0px;
-  font-weight: bold;
-  color:#fff;
-  text-align: center;;
-}
-
-.map-above{
+.ticket-content,
+.latest-ticket-content {
   display: flex;
   flex-direction: column;
+  min-height: 400px;
   align-items: center;
-  padding:30px;
-  position:relative;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.back-button{
-  background:#143f70;
-  color:#fff;
-  width:100%;
-  position: absolute;
-  max-width:200px;
-  text-align: center;
-  text-decoration: none;
-  padding:1rem;
-  left:20px;
+.ticket-content p {
+  padding: 20px 0px;
+}
+
+.frequency {
+  background: #143f70;
+  color: #fff;
+  padding: 0.5rem;
   border-radius: 10px;
 }
 
-@media screen and (max-width:991px){
-  .back-button{
-    position:relative;
-    margin:15px 0px;
+.latest-ticket {
+  display: none;
+}
+
+#latest {
+  background: #f59627;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 0px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  border-bottom: 2px dashed #000;
+  position: relative;
+  margin: 20px 0px;
+}
+
+.locations p {
+  margin-bottom: 10px;
+}
+
+.latest-ticket h1,
+.latest-ticket h2 {
+  padding: 10px;
+}
+
+.train {
+  max-width: 30px;
+  position: absolute;
+  left: 60px;
+  top: 1px;
+}
+
+.locations p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.latest-ticket a {
+  margin-top: 20px;
+  color: #143f70;
+  text-decoration: none;
+  background: #f59627;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.map-icon {
+  max-width: 35px;
+}
+
+#map {
+  width: 100%;
+}
+
+.map-link {
+  position: absolute;
+  bottom: 20px;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  right: 10px;
+  transition: all ease 0.3s;
+}
+
+.map-link:hover {
+  background-color: #143f70;
+}
+
+#ose-map {
+  height: 480px;
+}
+
+.section-title {
+  padding: 15px 0px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.map-above {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+}
+
+.back-button {
+  background: #143f70;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  max-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+  left: 20px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .back-button {
+    position: relative;
+    margin: 15px 0px;
   }
 }
 
-@media screen and (max-width:480px){
-    body{
-        background-size: auto;
-    }
+@media screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
 }
