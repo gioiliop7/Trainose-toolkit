@@ -356,6 +356,67 @@ label {
     border-radius:10px;
 }
 
+.map-icon{
+  max-width: 35px;
+}
+
+#map{
+  width:100%;
+}
+
+.map-link{
+  position:absolute;
+  bottom:20px;
+  background:#fff;
+  padding:0.5rem;
+  border-radius:10px;
+  right:10px;
+  transition: all ease 0.3s;
+}
+
+.map-link:hover{
+  background-color: #143f70;
+}
+
+#ose-map{
+  height:480px;
+}
+
+.section-title{
+  padding:15px 0px;
+  font-weight: bold;
+  color:#fff;
+  text-align: center;;
+}
+
+.map-above{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:30px;
+  position:relative;
+}
+
+.back-button{
+  background:#143f70;
+  color:#fff;
+  width:100%;
+  position: absolute;
+  max-width:200px;
+  text-align: center;
+  text-decoration: none;
+  padding:1rem;
+  left:20px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:991px){
+  .back-button{
+    position:relative;
+    margin:15px 0px;
+  }
+}
+
 @media screen and (max-width:480px){
     body{
         background-size: auto;
