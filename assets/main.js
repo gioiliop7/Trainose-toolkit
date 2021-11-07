@@ -25,8 +25,8 @@
       alert("Δώσε ένα json του τύπου που υπάρχει στις οδηγίες");
       return;
     }
-    if (data){
-      if ("etickets" in data){
+    if (data) {
+      if ("etickets" in data) {
         console.log("Valid Json");
       } else {
         alert("Δώσε ένα json του τύπου που υπάρχει στις οδηγίες");
@@ -106,4 +106,24 @@
     );
   }
   document.getElementById("file").addEventListener("change", onChange);
+
+  function loadJSON(callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open("GET", "diktyo.json", true);
+    xobj.onreadystatechange = function () {
+      if (xobj.readyState == 4 && xobj.status == "200") {
+        callback(xobj.responseText);
+      }
+    };
+    xobj.send(null);
+  }
+
+  loadJSON(function (response) {
+    // Parse JSON string into object
+    var diktyo_JSON = JSON.parse(response);
+    var diktyo_data = diktyo_JSON.data;
+    var nodes = diktyo_data.nodes;
+    console.log(nodes);
+  });
 })();
