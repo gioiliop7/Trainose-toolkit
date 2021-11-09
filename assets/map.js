@@ -16,23 +16,22 @@ NetworkJSON(function (response) {
   // Parse JSON string into object
   var diktyo_JSON = JSON.parse(response);
   var diktyo_data = diktyo_JSON.data;
-  var poleis = diktyo_data.poleis;
-  var node_in_use = diktyo_data.nodes_in_use;
-  var main_site = window.location.origin;
-  var marker_icon = main_site + "/assets/img/pin.png";
-  var osemap = L.map("ose-map", {
+  let poleis = diktyo_data.poleis;
+  let node_in_use = diktyo_data.nodes_in_use;
+  let main_site = window.location.origin;
+  let marker_icon = main_site + "/assets/img/pin.png";
+  let osemap = L.map("ose-map", {
     doubleClickZoom: true,
   }).setView([40.91351, 22.84058], 6.5);
-  var token = MAPBOX_API_KEY;
   L.tileLayer(
-    `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${token}`,
+    `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_API_KEY}`,
     {
       attribution: "OSE Railway Map",
       maxZoom: 20,
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
-      accessToken: token,
+      accessToken: MAPBOX_API_KEY,
     }
   ).addTo(osemap);
 
@@ -69,7 +68,7 @@ NetworkJSON(function (response) {
     let lat = element.latitude;
     let lon = element.longtitude;
     let label = element.label_en;
-    var popupcontent = "<h5>" + label + "</h5>";
+    let popupcontent = "<h5>" + label + "</h5>";
     var customIcon = L.icon({
       iconUrl: marker_icon,
       iconSize: [30, 50], // size of the icon

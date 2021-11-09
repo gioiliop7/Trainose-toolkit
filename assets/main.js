@@ -35,12 +35,18 @@
     }
     let valid_tickets = data.valid_etickets;
     let total = data.totalSum;
+    total = parseFloat(total);
+    total = total.toFixed(2);
+    total = new Intl.NumberFormat("el-GR", {
+      style: "currency",
+      currency: "EUR",
+    }).format(total);
     let uploader = document.getElementById("uploader");
     let ticket = document.getElementById("ticket");
     uploader.style.display = "none";
     ticket.style.display = "block";
     let cost = document.querySelector(".total-cost");
-    cost.innerText = `Total cost : ${total}€`;
+    cost.innerText = `Total cost : ${total}`;
     let purchases = document.querySelector(".total-tickets");
     purchases.innerText = `Total tickets : ${valid_tickets}`;
     let etickets = data.etickets;
