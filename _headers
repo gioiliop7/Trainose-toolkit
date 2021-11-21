@@ -1,6 +1,0 @@
-/* 
- Basic-Auth: SITE_ACCESS_USER:SITE_ACCESS_PASSWORD 
-    X-Frame-Options: DENY 
-    X-XSS-Protection: 1; mode=block 
-    Referrer-Policy: no-referrer 
-    X-Content-Type-Options: nosniff
